@@ -1,49 +1,21 @@
 ﻿namespace ConsoleApp2
 {
     internal class Program
+    {
 
         static void Main(string[] args)
         {
-            //Begint hier
-            //plus, min, delen door en bonus: Modulo
-            //een instance maken van de calculator
             Calculator mijnCalculator = new Calculator();
+
             int antwoord = mijnCalculator.Plus(10, 3);
-            int antwoord1 = mijnCalculator.Min(10, 3);
-            int antwoord2 = mijnCalculator.Div(10, 3);
-            int antwoord3 = mijnCalculator.Mult(10, 3);
-            int antwoord4 = 100;
-            Console.WriteLine(antwoord);
-            Console.WriteLine(antwoord1);
-            Console.WriteLine(antwoord2);
-            Console.WriteLine(antwoord3);
-            
-            Console.WriteLine(antwoord4);
+            Console.WriteLine(antwoord + "(Let niet op dit)");
 
-            //maak een output van 0 t/m 100
-            for (int i = 0; i <= antwoord4; i++)
-            {
-                if (i % 3 == 0)
-                {
-                    Console.WriteLine("XD");
-                }
-                else
-                {
-                    Console.WriteLine(i);
-                }
-            }
+            Console.WriteLine("Wie is de nieuwe user? (Naam + enter, leeftijd + enter, Address + enter)");
+            User nieuw1 = new User(Console.ReadLine(), Console.ReadLine(), Console.ReadLine());
+            //supernetjes dit! Kijk misschien nog even naar de "Factory design pattern"
+            Console.WriteLine("Deze user heet: " + nieuw1.name);
+            Console.WriteLine("Deze user is: " + nieuw1.age + " jaar oud.");
+            Console.WriteLine("Deze user's address is: " + nieuw1.address);
         }
+    }
 }
-
-/* 
- QUIZ-OPDRACHTEN LES
-
- Hoe herken je een functie?
- - het staat binnen de haakjes '()' en bevat een scope '{}'
-
- Hoe herken je een varabele?
- - het heeft geen haakjes of scope
-
- Hoe zou je omschrijven wat een class is?
- - een soort van blueprint die je ten alle tijden kan gebruiken
- */
